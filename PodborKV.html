@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PodborKv.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Подбор Квартир</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    
+    <div   class="side-button-1-wr" id="knopka"  style="  position:fixed;
+    animation-name: show_header;
+    animation-duration: 1s;">
+        <label class="side-button-1" for="side-checkbox">   
+                <img style="width: 100px;height: 100px; cursor: pointer;" src="https://demo.jaspersoft.com/urban-roast/images/menu-icons/menu-icon-midbrown.png" alt="">
+        </label>
+    </div>
+    <input type="checkbox" id="side-checkbox" />
+    <div class="side-panel">
+        <label class="side-button-2" for="side-checkbox">+</label>    
+        <div id="panel_left">
+                <a class="ssilki" href="index.html">Главная</a>
+                <a class="ssilki" href="aika.html">Строительство</a>
+                <a class="ssilki" href="proektihtml.html">Проекты</a>
+                <a class="ssilki" href="PodborKV.html">Подбор квартир</a>
+                <a class="ssilki" href="contact.html">Контакты</a>
+                <a class="ssilki" href="partners.html">Партнерам</a>
+        </div>
+    </div>
+
+
+<!-- ////////////////////////////////////////////////////// -->
+    <header  id="headr">
+        <div class="header">
+            <div class="header_inner">
+                <img class="nav_img" src="https://static.tildacdn.com/tild6337-6433-4830-b539-333535303236/3.svg" width="180"></img>
+                <nav class="nav">
+                    <a class="nav_link" href="index.html">Главная</a>
+                        <a class="nav_link" href="aika.html">Строительство</a>
+                        <a class="nav_link" href="proektihtml.html">Проекты</a>
+                        <a class="nav_link" href="PodborKV.html">Подбор квартир</a>
+                        <a class="nav_link" href="contact.html">Контакты</a>
+                        <a class="nav_link" href="partners.html">Партнерам</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+
+<section class="section1">
+
+    <div class="intro">
+        <div class="l">
+            <p class="into_txt">Подбор квартиры</p>
+            <div class="rectangle">
+
+                <p class="rec_t1">Индивидуальный подбор вашей будущей квартиры</p>
+
+                        <div class="poisk1" id="poisk1"> 
+                        <div class="rec_podbor">
+                            <div class="rec_our">                    
+                                <div class="cena">
+                                <p class="ned">Стоимость недвижимости</p>
+                                <input id = "i1" class="input" type="text" placeholder="Бюджет">
+                            </div>
+                            <div class="cena">
+                                <p class="ned">Общяя площадь в кв.м</p>
+                                <input id="i2" class="input" type="number" placeholder="Общяя площадь">
+                            </div>
+                            <div class="cena">
+                                <p class="ned">Количество комнат</p>
+                                <input id="i3" class="input" type="number" placeholder="Количество комнат">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="sub_zero"> 
+                            <div class="submit" onclick="search(i1.value, i2.value, i3.value)" > 
+                                <p class="sub_btn">Подобрать квартиру</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poisk2" id="poisk2">
+
+                        <div class="result">
+                            <p class="kv">Результат поиска:</p>
+                        </div>
+                        <div class="result1">
+                            <div id = "res"></div>
+                        </div>
+                        <div class="iskat">
+                            <div class="search" onclick="again()">Искать</div>
+                        </div>
+                    </div>
+            </div>
+            
+
+        </div>
+        <div class="r">
+            <img class="rr" src="https://thumb.tildacdn.com/tild3034-3030-4537-b239-663339326362/-/cover/920x1434/center/center/-/format/webp/minh-pham-OtXADkUh3-.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section7">
+    <div class="end1">
+        <div class="end_img">
+            <img src="https://static.tildacdn.com/tild6337-6433-4830-b539-333535303236/3.svg" width="180" alt="">
+        </div>
+        <div class="end_src1">
+            <a class="end_l" href="index.html">Главная</a>
+            <a class="end_l" href="aika.html">Строительство</a>
+            <a class="end_l" href="proektihtml.html">Проекты</a>
+        </div>
+        <div class="end_src2">
+            <a class="end_l" href="PodborKV.html">Подбор квартир</a>
+            <a class="end_l" href="contact.html">Контакты</a>
+        </div> 
+        <div class="end_link">
+            <div>
+                <a class="end_ll" href="#">sales@timegroup.kz</a>
+            </div>
+            <div>
+                <a class="end_ll" href="#">+7 (708) 674 06 98</a>
+            </div>
+            <div class="socset">
+                <img style="padding-right: 5px;" src="https://static.tildacdn.com/tild6533-3232-4863-b032-353534363663/instagram-logo_1.svg" width="35" alt="">
+                <img style="padding-right: 5px;" src="https://static.tildacdn.com/tild6465-6133-4732-b162-613633373435/facebook_1.svg" width="35" alt="">
+                <img style="padding-right: 5px;" src="https://static.tildacdn.com/tild6233-6234-4435-b661-313462646365/youtube.svg" width="35" alt="">
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<script>
+    ScrollReveal({
+        reset: true,
+        distance: '60px',
+        duration: 800,
+        delay: 400
+    });
+    
+    ScrollReveal().reveal('.r', {delay: 500, origin: 'right'});
+    ScrollReveal().reveal('.rectangle', {delay: 500, origin: 'left'});
+</script>
+
+    <script src="PodborKV.js"></script>
+</body>
+</html>

@@ -1,0 +1,514 @@
+body {
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+box-sizing: border-box;
+}
+/* Шапка */
+.header{
+    background-color: white;
+    padding-inline: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.header_inner{
+    display:flex;
+    justify-content: space-betweens;
+    align-items: center;
+}
+
+.nav_img{
+    margin-top: 20px;
+}
+
+
+.nav{
+    margin-top: 20px;
+    align-items: center;
+    margin-left: 160px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.nav_link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 30px;
+    position: relative;
+    color:black;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+.nav_link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #fce38a;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear;
+}
+.nav_link:hover{
+    color: rgb(26, 63, 156);
+}
+.nav_link:hover :after{
+    opacity: 1;
+}
+/* Статичная шапка */
+.header_fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation-name: show_header;
+    animation-duration: 1s;
+    
+}
+@keyframes show_header {
+    0%{
+        opacity: 0;
+        top: -70px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+
+    }
+}
+/* //////////////// */
+
+
+/* //////////////////////////Shapka////////////////////// */
+#side-checkbox {
+    display: none;
+}
+
+.side-panel {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: -360px;
+    background: #337AB7;
+    transition: all 0.5s;   
+    width: 220px;
+    height: 100vh;
+    box-shadow: 10px 0 20px rgba(0,0,0,0.4);
+    color: #FFF;
+    padding: 40px 20px;
+}
+.side-title {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #BFE2FF;
+}
+/* Оформление кнопки на странице */
+/* .side-button-1-wr {
+    text-align: center;  Контейнер для кнопки, чтобы было удобнее ее разместить 
+} */
+
+.side-button-1 {
+    display: inline-block;
+}
+.side-button-1 .side-b {
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-family: 'Roboto', Тahoma, sans-serif;
+    background: #337AB7;
+    cursor: pointer; 
+    border: 2px solid #BFE2FF;
+}
+
+/* Переключатели кнопки 1 */
+.side-button-1 .side-close {
+    display: none;
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-open {
+    display: none;
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-close {
+    display: block;
+}
+#side-checkbox:checked + .side-panel {
+    left: 0;
+}
+/* Оформление кнопки на панеле */
+.side-button-2 {
+    font-size: 30px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    color: #BFE2FF;    
+    transition: all 280ms ease-in-out;    
+}
+.side-button-2:hover {
+    transform: rotate(45deg) scale(1.1);    
+    color: #FFF;
+}
+
+
+#panel_left{
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+   align-items: center;
+}
+
+.ssilki{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+@media(max-width:1000px){
+    .carti_2{
+        display: flex; 
+        flex-flow: column wrap; 
+        align-items: center; 
+    }
+    #knopka{
+   
+    }
+    #headr{
+      display: none;
+    }
+   
+    
+}
+@media not (max-width:1000px){
+    #knopka{
+   display: none;
+    }
+    #headr{
+      display: block;
+    }
+}
+
+
+
+
+
+/*************/
+
+.section1{
+    margin-top: 100px;
+    height: 799px;
+    width: 100%;
+}
+.intro{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.vrema{
+    width: 50%;
+}
+.photo{
+   width: 50%;
+}
+.txt{
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 180px;
+    margin-left: 50px ;
+}
+.ph1{
+    float: right;
+}
+.n1{
+    font-size:50px;
+    text-decoration: solid;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+.n2{
+    font-size: 20px;
+}
+.knop{
+    margin-top: 50px;
+    display: flex;
+    justify-content:center;
+}
+.Projects{
+    margin-left: 30px;
+    width: 220px;
+    height:55px;
+    background-color: rgb(20, 60, 126);
+     display: flex;
+    align-items: center;
+    transform-origin: center center;
+    text-decoration: none;  
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pp{
+    transform-origin: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+@media(max-width:1200px){
+    .intro{
+        display: block;
+    }
+    .vrema{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .photo{
+        width: 100%;
+        margin: auto;
+    }
+    .ph1{
+        max-width: 700px;
+        margin: auto;
+        float: left;
+        margin-left: 150px;
+    }
+    .txt{
+        margin: auto;
+    }
+}
+
+/* .joj{
+    height: 200px;
+} */
+
+.section2{
+    height: 600px;
+    width: 100%;
+    background-color:  rgb(20, 62, 126);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+}
+.a1{
+   color: white;
+   padding-left: 80px;
+}
+.ab2{
+    color: white;
+}
+.ab1{
+    color: white;
+    width: 380px;
+}
+@media(max-width:1400px){
+    .section2{
+        height: 1050px;
+    }
+    .about{
+        display: block;
+
+    }
+
+}
+.section3{
+    height: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.part3_1{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    padding-top: 50px;
+}
+.part3_img{
+    width: 80px;
+}
+.part3_txt{
+    width: 500px;
+}
+.part3_title{
+    font-size: 40px;
+    font-weight:500;
+}
+.part3_about{
+    font-size: 25px;
+    font-weight: 500;
+}
+@media(max-width:1000px){
+    .part3{
+        width: 100%;
+    }
+}
+@media(max-width:500px){
+    .ph1{
+        max-width: 100%;
+    }
+}
+
+/* .section4{
+    height: 800px;
+} */
+.part4{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    gap: 100px;
+    padding-bottom: 200px;
+}
+.part4_proj{
+    background-color: rgb(20, 64, 126); 
+    width: 400px;
+    height: 300px;
+    text-align: center;align-items: center;justify-content: center;
+    margin-right: 30px;
+}
+.t1{
+    font-size: 30px;
+    color: white;
+}
+.t2{
+    font-size: 25px;
+    color: white;
+    text-decoration: underline;
+}
+.t2:hover{
+    color: rgb(166, 160, 200);;
+}
+.part4_corusel{
+    width: 800px;
+    height: 420px;
+    background-image: url("https://qazaqstroy.kz/storage/app/uploads/public/5cd/02f/c69/thumb__870_450_0_0_auto.jpg");
+}
+.next{
+    width: 50px;
+    float: right;
+}
+
+.section5{
+    height: 500px;
+    background-color: rgb(20, 64, 126);
+
+}
+.doc_list{
+    width: 400px;
+}
+.Document{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+.doc{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.doc_text{
+    padding-bottom: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+.section6{
+    margin-top: 600px;
+    height: 350px;
+    background-color: rgb(20, 64, 126);
+}
+.zav_inputs{
+    gap: 30px;
+    display: flex;
+}
+
+.zav_submit{
+    background-color: white;
+    width: 150px;
+    height: 50px;
+}
+.zav_input{
+    height: 50px;
+    width: 220px;
+    border: solid 1px white;
+    background-color:  rgb(20, 64, 126);;
+}
+.zav_ques{
+    font-size: 30px;
+    color: white;
+}
+input::placeholder{
+    font-size: 18px;
+    align-items: center;
+    padding-left: 5px;
+    color: rgb(102, 122, 160);
+}
+input, select, textarea{
+    padding-left: 15px;
+    color: white;
+}
+.zav_ques:focus{
+    color: white
+}
+.end1{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center; 
+    gap: 130px;
+}
+.socset{
+    display: flex;
+}
+.end_src1{
+    display: flex;
+    flex-direction: column;
+}
+.end_src2{
+    display: flex;
+    flex-direction: column;
+}
+.end_l{
+    text-decoration: none;
+    color: black;
+}
+.end_ll{
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: rgb(20, 64, 126);
+    font-size: 22px;
+    font-weight: 500;
+}
+.socset{
+    padding-top: 10px;
+}
